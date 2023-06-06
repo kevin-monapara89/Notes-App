@@ -1,4 +1,4 @@
-package com.kevin.notesapp
+package com.kevin.notesapp.Activity
 
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.kevin.notesapp.Adapter.NotesAdapter
 import com.kevin.notesapp.Database.RoomDB
 import com.kevin.notesapp.Entity.NotesEntity
+import com.kevin.notesapp.R
 import com.kevin.notesapp.databinding.ActivityMainBinding
 import com.kevin.notesapp.databinding.DialogaddBinding
 import java.text.SimpleDateFormat
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var db : RoomDB
     lateinit var binding: ActivityMainBinding
     lateinit var adapter : NotesAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -55,4 +57,5 @@ class MainActivity : AppCompatActivity() {
         }
         dialog.show()
     }
+
 }
