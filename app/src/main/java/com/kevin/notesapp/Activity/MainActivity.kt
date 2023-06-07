@@ -65,19 +65,6 @@ class MainActivity : AppCompatActivity() {
             var dates = currentDate.split("-")
             bind.edtdate.text = currentDate
 
-            var dialog =
-                DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
-                    override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
-
-                        var Year = p1
-                        var Month = p2 + 1
-                        var Date = p3
-
-                        var selectedDate = "$p3-${(p2 + 1)}-$p1"
-                        bind.edtdate.text = selectedDate
-                    }
-
-                }, dates[2].toInt(), dates[1].toInt() - 1, dates[0].toInt())
             dialog.show()
         }
 
@@ -108,7 +95,7 @@ class MainActivity : AppCompatActivity() {
             var date = bind.edtdate.text.toString()
             var month = bind.edtdate.text.toString()
             var year = bind.edtdate.text.toString()
-            var format = SimpleDateFormat("DD/MM/YYYY hh:mm")
+            var format = SimpleDateFormat("DD-MM-YYYY hh:mm")
             var current = format.format(Date())
             var data = NotesEntity(title, text, date , month , year)
             db.note().addNote(data)
