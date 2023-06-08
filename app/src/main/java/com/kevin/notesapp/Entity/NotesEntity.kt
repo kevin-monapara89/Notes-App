@@ -12,6 +12,8 @@ data class NotesEntity(
     @ColumnInfo(name = "date") var date: String,
     @ColumnInfo(name = "month") var month: String,
     @ColumnInfo(name = "year") var year: String,
+    @ColumnInfo(name = "hour") var hour: String,
+    @ColumnInfo(name = "minute") var minute: String,
 ){
     @PrimaryKey(autoGenerate = true) var id: Int = 0
 }

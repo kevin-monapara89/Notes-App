@@ -78,14 +78,14 @@ class MainActivity : AppCompatActivity() {
                 bind.edttime.text = currentTime
                 var seleTime = currentTime
 
-                var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
-                    override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-
-                    }
-
-                }, 10, 0, false)
-
-                dialog1.show()
+//                var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
+//                    override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
+//
+//                    }
+//
+//                }, 10, 0, false)
+//
+//                dialog1.show()
             }
 
             bind.btnsubmit.setOnClickListener {
@@ -95,9 +95,12 @@ class MainActivity : AppCompatActivity() {
             var date = bind.edtdate.text.toString()
             var month = bind.edtdate.text.toString()
             var year = bind.edtdate.text.toString()
+            var hour = bind.edttime.text.toString()
+            var minute = bind.edttime.text.toString()
+
             var format = SimpleDateFormat("DD-MM-YYYY hh:mm")
             var current = format.format(Date())
-            var data = NotesEntity(title, text, date , month , year)
+            var data = NotesEntity(title, text, date , month , year, hour, minute)
             db.note().addNote(data)
             adapter.update(db.note().getNotes())
             dialog.dismiss()

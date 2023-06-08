@@ -1,5 +1,6 @@
 package com.kevin.notesapp.Adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,10 +31,16 @@ class NotesAdapter(notes : List<NotesEntity>) : Adapter<NotesAdapter.NotesHolder
             notes.get(position).apply {
                 txttitle.text = title
                 txttext.text = text
+                txtdate.text = date
+                txtdate.text = month
+                txtdate.text = year
+                txttime.text = hour
+                txttime.text = minute
             }
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun update(notes: List<NotesEntity>) {
         this.notes = notes
         notifyDataSetChanged()
