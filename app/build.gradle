@@ -25,11 +25,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility 17
-        targetCompatibility 17
+        sourceCompatibility
+        targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget 
     }
     buildFeatures {
         viewBinding true

@@ -1,22 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="@dimen/_10sdp"
-    app:cardElevation="@dimen/_7sdp"
-    app:cardUseCompatPadding="true">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_9sdp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:text="11-06-2023"/>
+
+        <TextView
+            android:id="@+id/txttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textSize="@dimen/_9sdp"
+            android:textStyle="bold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="03:23"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/_10sdp"
-        android:background="#D1D1D1">
+        android:background="#F3CC56">
 
         <TextView
             android:id="@+id/txttitle"
@@ -26,7 +60,7 @@
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
             android:text="jguhuk"
-            android:textColor="#494949"
+            android:textColor="#ffffff"
             android:marqueeRepeatLimit="marquee_forever"/>
 
     </LinearLayout>
@@ -47,38 +81,8 @@
 
     </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_25sdp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:background="#9A9A9A">
-
-            <TextView
-                android:id="@+id/txtdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="@dimen/_9sdp"
-                android:textStyle="bold"
-                android:layout_marginLeft="@dimen/_15sdp"
-                android:textColor="#ffffff"
-                android:text="11-06-2023"/>
-
-            <TextView
-                android:id="@+id/txttime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:textSize="@dimen/_9sdp"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:text="03:23"/>
-
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>

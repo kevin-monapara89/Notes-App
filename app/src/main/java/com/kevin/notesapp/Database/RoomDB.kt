@@ -7,8 +7,8 @@ import androidx.room.RoomDatabase
 import com.kevin.notesapp.Dao.NoteDao
 import com.kevin.notesapp.Entity.NotesEntity
 
-@Database(entities = [NotesEntity::class], version = 1)
-abstract class RoomDB : RoomDatabase(){
+@Database(entities = [NotesEntity::class], version = 3)
+public abstract class RoomDB : RoomDatabase(){
 
     companion object {
         fun init(context: Context): RoomDB {
@@ -18,7 +18,6 @@ abstract class RoomDB : RoomDatabase(){
                 .build()
 
             return db
-
         }
     }
     abstract fun note() : NoteDao

@@ -78,14 +78,6 @@ class MainActivity : AppCompatActivity() {
                 bind.edttime.text = currentTime
                 var seleTime = currentTime
 
-//                var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
-//                    override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-//
-//                    }
-//
-//                }, 10, 0, false)
-//
-//                dialog1.show()
             }
 
             bind.btnsubmit.setOnClickListener {

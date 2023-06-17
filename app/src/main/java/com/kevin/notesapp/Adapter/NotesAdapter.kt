@@ -40,9 +40,8 @@ class NotesAdapter(notes : List<NotesEntity>) : Adapter<NotesAdapter.NotesHolder
         }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     fun update(notes: List<NotesEntity>) {
-        this.notes = notes
+        this.notes = notes as ArrayList<NotesEntity>
         notifyDataSetChanged()
     }
 }
