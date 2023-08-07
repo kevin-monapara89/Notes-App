@@ -1,18 +1,18 @@
 package com.kevin.notesapp.Adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.google.android.material.internal.NavigationMenuItemView
 import com.kevin.notesapp.Entity.NotesEntity
+import com.kevin.notesapp.R
 import com.kevin.notesapp.databinding.ItemnotesBinding
 
-class NotesAdapter(notes : List<NotesEntity>) : Adapter<NotesAdapter.NotesHolder>() {
+class NotesAdapter(updatePin: (NotesEntity) -> Unit) : Adapter<NotesAdapter.NotesHolder>() {
 
-    var notes = notes
+    var notes = ArrayList<NotesEntity>()
+    var updatePin = updatePin
+
     class  NotesHolder(itemView: ItemnotesBinding) : ViewHolder(itemView.root) {
         var binding = itemView
     }
@@ -32,10 +32,16 @@ class NotesAdapter(notes : List<NotesEntity>) : Adapter<NotesAdapter.NotesHolder
                 txttitle.text = title
                 txttext.text = text
                 txtdate.text = date
-                txtdate.text = month
-                txtdate.text = year
-                txttime.text = hour
-                txttime.text = minute
+
+                if (pin){
+                    imgpin.setImageResource(R.drawable.pin)
+                }else{
+                    imgpin.setImageResource(R.drawable.unpin)
+                }
+
+                imgpin.setOnClickListener {
+                    updatePin.invoke(notes.get(position))
+                }
             }
         }
     }
@@ -43,5 +49,9 @@ class NotesAdapter(notes : List<NotesEntity>) : Adapter<NotesAdapter.NotesHolder
     fun update(notes: List<NotesEntity>) {
         this.notes = notes as ArrayList<NotesEntity>
         notifyDataSetChanged()
+    }
+
+    fun setNotes(notes: List<NotesEntity>) {
+        this.notes = notes as ArrayList<NotesEntity>
     }
 }

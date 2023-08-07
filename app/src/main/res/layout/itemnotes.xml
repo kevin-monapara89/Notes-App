@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_25sdp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/txtdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="@dimen/_9sdp"
-            android:textStyle="bold"
-            android:layout_marginLeft="@dimen/_25sdp"
-            android:text="11-06-2023"/>
-
-        <TextView
-            android:id="@+id/txttime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:layout_marginRight="@dimen/_30sdp"
-            android:textSize="@dimen/_9sdp"
-            android:textStyle="bold"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:text="03:23"/>
-
-    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -46,40 +17,50 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_10sdp"
-        android:background="#F3CC56">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F3CC56"
+                android:padding="@dimen/_10sdp">
 
-        <TextView
-            android:id="@+id/txttitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:textSize="@dimen/_15sdp"
-            android:textStyle="bold"
-            android:text="jguhuk"
-            android:textColor="#ffffff"
-            android:marqueeRepeatLimit="marquee_forever"/>
+                <TextView
+                    android:id="@+id/txttitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="jguhuk"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/imgpin"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/unpin"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/txttext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_13sdp"
-            android:layout_margin="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:singleLine="true"
-            android:marqueeRepeatLimit="marquee_forever"/>
+                <TextView
+                    android:id="@+id/txttext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_13sdp" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11-06-2023"
+                android:textSize="@dimen/_9sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
