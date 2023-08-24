@@ -18,7 +18,6 @@ interface NoteDao {
     @Delete
     fun deleteNote(notesEntity: NotesEntity)
 
-    @Query("DELETE FROM notes WHERE id= :id ")
-    fun DeleteNote(id: Int)
-
+//    @Query("DELETE FROM notes")
+//    fun DeleteNote(notesEntity: NotesEntity)
 }

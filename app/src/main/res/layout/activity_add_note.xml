@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/_300sdp"
-    android:layout_height="@dimen/_500sdp"
-    android:layout_gravity="center"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddNote">
 
     <TextView
         android:layout_width="match_parent"
@@ -16,15 +17,15 @@
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edttitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:background="@null"
-            android:textSize="@dimen/_18sdp"
-            android:hint="Enter Title..."
-            android:paddingRight="@dimen/_60sdp" />
+    <EditText
+        android:id="@+id/edttitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@null"
+        android:textSize="@dimen/_18sdp"
+        android:hint="Enter Title..."
+        android:paddingRight="@dimen/_60sdp" />
 
     <TextView
         android:id="@+id/txtdate"
@@ -36,18 +37,18 @@
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"/>
 
-        <EditText
-            android:id="@+id/edttext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:background="@null"
-            android:gravity="top"
-            android:hint="Enter Text ..."
-            android:lines="8" />
+    <EditText
+        android:id="@+id/edttext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="Enter Text ..."
+        android:lines="8" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialDialogPickerCircleBtn"
+        android:id="@+id/CircleBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -63,7 +64,5 @@
         android:layout_margin="@dimen/_15sdp"
         android:backgroundTint="#2196F3"
         android:text="submit" />
-
-
 
 </LinearLayout>

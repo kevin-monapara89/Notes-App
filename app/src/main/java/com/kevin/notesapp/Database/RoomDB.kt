@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.kevin.notesapp.Dao.NoteDao
 import com.kevin.notesapp.Entity.NotesEntity
 
-@Database(entities = [NotesEntity::class], version = 3)
+@Database(entities = [NotesEntity::class], version = 4)
 public abstract class RoomDB : RoomDatabase(){
 
     companion object {

@@ -21,7 +21,7 @@
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_30sdp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#1491F4"
         android:src="@drawable/add_24" />
 
 </RelativeLayout>
